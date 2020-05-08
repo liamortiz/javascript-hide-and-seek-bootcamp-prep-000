@@ -8,7 +8,11 @@ function nestedTarget() {
 }
 
 function increaseRankBy(n) {
-  
+  let parents = document.getElementsByClassName("ranked-list")
+  let items = parents.getElementsByTagName("li")
+  for(let i = 0; i < items.length; i++) {
+    console.log(items)
+  }
 }
 
 function deepestChild() {
