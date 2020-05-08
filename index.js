@@ -8,8 +8,10 @@ function nestedTarget() {
 }
 
 function increaseRankBy(n) {
-  let parents = document.getElementsByClassName("ranked-list")
-  console.log(parents[0].getElementsByTagName("li"))
+  let items = document.querySelectorAll("ul.ranked-list li")
+  for (let i = 0; i < items.length; i++) {
+    items[i].innerHTML = (parseInt(items[i].innerHTML) + n).toString()
+  }
 }
 
 function deepestChild() {
